@@ -30,12 +30,13 @@ header {
 	min-width:940px;
 }
 header .container {
-	height:194px;
+	height:60px;
 	position:relative;
 	padding:0;
 }
 section#content {
 	width:900px;
+	margin-top: 50px;
 }
 
 section p span a{
@@ -44,11 +45,12 @@ section p span a{
 }
 
 section h2{
-	font-size: 20px;
+	font-size: 35px;
+	text-align: center;
 }
 
 section h2 p{
-	font-size: 30px;
+	font-size: 50px;
 }
 
 section p span a:hover{
@@ -104,7 +106,7 @@ fieldset {
 }
 .categories li {
 	font-weight:bold;
-	font-size:.857em;
+	font-size: 20px;
 	padding-bottom:8px;
 	margin-bottom:6px;
 	background:url(../images/divider1.gif) repeat-x left bottom;
@@ -493,12 +495,32 @@ input{
 	width:123px;
 	font-weight:bold;
 	color:#008cc4;
+	display: inline-block;
 }
+
+#contacts-form label:hover{
+	color: #ff7b01;
+	font-weight: bold;
+}
+
+#contacts-form button{
+	color: #008cc4;
+	font-weight: bold;
+}
+
+#contacts-form button:hover{
+	color: #ff7b01;
+	font-weight: bold;
+}
+
+
 #contacts-form input {
-	width:277px;
-	padding:2px 0 2px 3px;
+	width:295px;
+	/*padding:2px 0 2px 3px;*/
+	padding:2px 0 8px 10px;
 	border:1px solid #d1d1d1;
 	color:#70635b;
+	height: 25px;
 }
 #contacts-form textarea {
 	width:503px;

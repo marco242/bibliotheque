@@ -15,7 +15,7 @@ class Departement(models.Model):
      return self.libelle.title()
 
 class Filiere(models.Model):
-  image=models.FileField(upload_to="Repertoire_Images")
+  image=models.FileField(upload_to="Repertoire_Images", default='Repertoire_Images/images.jpeg')
   libelle=models.CharField(max_length=255, unique=True ,help_text='veuillez indiquer une filiere')
   description=models.TextField()
   departement=models.ForeignKey(Departement, on_delete=models.CASCADE)
