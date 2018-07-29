@@ -17,7 +17,7 @@ class Categorie(models.Model):
 
 class Document(models.Model):
 	libelle=models.CharField(max_length=255, unique=True, help_text="Ce champ nomme une categorie de manière unique")
-	categorie=models.ForeignKey(Domaine, on_delete=models.CASCADE)
+	categorie=models.ForeignKey(Categorie, on_delete=models.CASCADE)
 	description=models.TextField(blank=True, null=True)
 	image=models.FileField(upload_to='Document')
 	fichier=models.FileField(upload_to='Document')
