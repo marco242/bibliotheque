@@ -8,10 +8,17 @@ class Domaine(models.Model):
 		return self.libelle.title()
 
 class Categorie(models.Model):
-	libelle=models.CharField(max_length=255, unique=True, help_text="Ce champ nomme un domaie de manière unique")
+	libelle=models.CharField(max_length=255, unique=True, help_text="Ce champ nomme une categorie de manière unique")
 	description=models.TextField()
 
 	return self.libelle.title()
+
+class Document(models.Model):
+	libelle=models.CharField(max_length=255, unique=True, help_text="Ce champ nomme une categorie de manière unique")
+	description=models.TextField(blank=True, null=True)
+	image=models.FileField(upload_to='Document')
+
+
 
 
 
