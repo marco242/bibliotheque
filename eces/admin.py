@@ -1,8 +1,6 @@
 from django.contrib import admin
-from . models import Departement, Option, Document
+from . models import Bibliotheque
 
-admin.site.register(Departement)
-admin.site.register(Option)
-admin.site.register(Document)
+admin.site.register(Bibliotheque)
 
 # Register your models here.
