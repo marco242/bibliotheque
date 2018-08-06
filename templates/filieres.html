@@ -1,0 +1,8 @@
+{% for filiere in filiere_list %}
+ <ul>
+ <li><a href="#">{{ filiere.libelle }}</a></li>
+ {% empty %}
+ <li>liste vide</li>
+ {% endfor %}
+ </ul>
+            

@@ -1,0 +1,10 @@
+<h2>{{ departement.libelle }}</h2>
+{{ departement.description }}
+
+<h3>Les filières associées sont:</h3>
+{% for filiere in departement.filiere_set.all %}
+<ul>
+	<li>{{ filiere.libelle }}</li>
+
+</ul>
+{% endfor %}

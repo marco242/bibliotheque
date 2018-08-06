@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+
+{% block submenu %}
+{% for departement in departement_list %}
+<li><a href="#">{{ departement.libelle }}</a></li>
+{% empty %}
+<p>La liste département est vide</p>
+{% endfor %}
+{% endblock submenu %}
+
+
+{% block detail %}
+{% for document in document_list %}
+<li><span><img src="{% static 'eces/images/icon1.png' %}"></span>
+<!--<img src="{{object.image.url}}" width="200">-->
+<h4>{{ document.titre }}</h4>
+<h4>{{ document.Image }}</h4>
+<h4>{{ document.fichier.url}}</h4>
+</li>
+{% empty %}
+{% endfor %}
+{% endblock detail %}
