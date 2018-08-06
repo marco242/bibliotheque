@@ -30,6 +30,7 @@ class Filiere(models.Model):
 
 class Document(models.Model):
   titre=models.CharField(max_length=100, unique=True, help_text='veuillez indiquer le titre du document')
+  description=models.TextField()
   Image=models.FileField(upload_to="Repertoire_Images")
   fichier=models.FileField(upload_to="Repertoire_Documents")
   filiere=models.ForeignKey(Filiere, on_delete=models.CASCADE)

@@ -1,6 +1,6 @@
 {% for departement in departement_list %}
 <ul>
-<li><a href="#">{{ departement.libelle }}</a></li>
+<li><a href="{% url 'departement_detail' departement.pk %}">{{ departement.libelle }}</a></li>
 {% empty %}
 <li>Liste vide</li>
 {% endfor %}

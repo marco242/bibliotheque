@@ -1,0 +1,10 @@
+<h2>{{ filiere.libelle }}</h2>
+{{ filiere.description }}
+
+{% for document in filiere.document_set.all %}
+
+ <ul>
+ 	<li>{{ document.titre }}</li>
+ </ul>
+
+{% endfor %}

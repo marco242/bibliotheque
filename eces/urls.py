@@ -6,6 +6,10 @@ urlpatterns=[
 
 	path('', views.AcceuilView.as_view(), name='acceuil'),
 	path('departement/', views.DepartementListView.as_view(), name='departement_list'),
+	path('departement/<int:pk>/', views.DepartementDetailView.as_view(), name='departement_detail'),
 	path('filieres/', views.FiliereListView.as_view(), name='filiere_list'),
+	path('filieres/<int:pk>/', views.FiliereDetailView.as_view(), name='filiere_detail'),
+	path('documents/', views.DocumentListView.as_view(), name='document_list'),
+	path('documents/<int:pk>/', views.DocumentDetailView.as_view(), name='document_detail'),
 
 ]
