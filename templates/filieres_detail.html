@@ -4,7 +4,7 @@
 {% for document in filiere.document_set.all %}
 
  <ul>
- 	<li>{{ document.titre }}</li>
+ 	<li><a href="{% url 'document_list' %}">{{ document.titre }}</a></li>
  </ul>
 
 {% endfor %}

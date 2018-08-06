@@ -4,7 +4,7 @@
 <h3>Les filières associées sont:</h3>
 {% for filiere in departement.filiere_set.all %}
 <ul>
-	<li>{{ filiere.libelle }}</li>
+	<li><a href="{% url 'filiere_list'  %}">{{ filiere.libelle }}</a></li>
 
 </ul>
 {% endfor %}
