@@ -4,6 +4,7 @@ from . import models
 
 class AcceuilView(TemplateView):
 	template_name='base.html'
+	model=models.Departement
 
 class DepartementListView(ListView):
 	template_name='departement.html'
