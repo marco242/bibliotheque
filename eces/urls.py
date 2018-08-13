@@ -11,5 +11,6 @@ urlpatterns=[
 	path('filieres/<int:pk>/', views.FiliereDetailView.as_view(), name='filiere_detail'),
 	path('documents/', views.DocumentListView.as_view(), name='document_list'),
 	path('documents/<int:pk>/', views.DocumentDetailView.as_view(), name='document_detail'),
+	path('connexion/', views.ConnexionListView.as_view(), name='connexion_form'),
 
 ]

@@ -1,4 +1,5 @@
 from django.views.generic import TemplateView, ListView, DetailView
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 from . import models
 
@@ -26,12 +27,14 @@ class DocumentListView(ListView):
 	template_name='documents.html'
 	model=models.Document
 
-class DocumentDetailView(DetailView):
+class DocumentDetailView(LoginRequiredMixin, DetailView):
 	template_name='documents_detail.html'
 	model=models.Document
 
 
-
+class ConnexionListView(ListView):
+	template_name='connexion.html'
+	model=models.Departement
 
 
 # Create your views here.

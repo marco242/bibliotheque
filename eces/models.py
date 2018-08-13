@@ -1,6 +1,7 @@
 from django.db import models
 
 class Departement(models.Model):
+  image=models.FileField(upload_to="Repertoire_Images")
   libelle=models.CharField(max_length=255, unique=True ,help_text='veuillez indiquer un departement')
   description=models.TextField()
 
@@ -14,6 +15,7 @@ class Departement(models.Model):
      return self.libelle.title()
 
 class Filiere(models.Model):
+  image=models.FileField(upload_to="Repertoire_Images")
   libelle=models.CharField(max_length=255, unique=True ,help_text='veuillez indiquer une filiere')
   description=models.TextField()
   departement=models.ForeignKey(Departement, on_delete=models.CASCADE)
@@ -31,7 +33,7 @@ class Filiere(models.Model):
 class Document(models.Model):
   titre=models.CharField(max_length=100, unique=True, help_text='veuillez indiquer le titre du document')
   description=models.TextField()
-  Image=models.FileField(upload_to="Repertoire_Images")
+  image=models.FileField(upload_to="Repertoire_Images")
   fichier=models.FileField(upload_to="Repertoire_Documents")
   filiere=models.ForeignKey(Filiere, on_delete=models.CASCADE)
    

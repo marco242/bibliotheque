@@ -1,13 +1,11 @@
 {% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
-
-<!--{% static 'eces/-->
 <head>
-<title>ECES Biblio</title>
+<title>Student's Site</title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="{% static 'eces/css/reset.css' %}" type="text/css" media="all">
-<link rel="stylesheet" href="{% static 'eces/css/style.css' %}"  type="text/css" media="all">
+<link rel="stylesheet" href="{% static 'eces/css/style.css' %}" type="text/css" media="all">
 <script type="text/javascript" src="{% static 'eces/js/jquery-1.4.2.min.js' %}" ></script>
 <script type="text/javascript" src="{% static 'eces/js/cufon-yui.js' %}"></script>
 <script type="text/javascript" src="{% static 'eces/js/cufon-replace.js' %}"></script>
@@ -24,41 +22,103 @@
 <body id="page1">
 <!-- START PAGE SOURCE -->
 <div class="wrap">
+  {%  block header%}
   <header>
     <div class="container">
       <h1><a href="#">Student's site</a></h1>
       <nav>
         <ul>
-            <li class="current"><a href="templates/index.html" class="m1">Acceuil</a></li>
-          <li><a href="{% static 'eces/contact-us.html' %}" class="m4">Nous joindre</a></li>
+          <li class="current"><a href="{%url 'acceuil'  %}" class="m1">Acceuil</a></li>
+          <li><a href="{% url 'departement_list' %}" class="m2">Departement</a></li>
+          {% if user.is_authenticated %}
+               <li><a href="{% url 'logout' %}" class="m3">Deconnexion</a></li>
+          {% else %}
+                <li><a href="{% url 'login' %}" class="m3">Connexion</a></li>
+          {% endif %}
+
         </ul>
       </nav>
     </div>
   </header>
+  {%  endblock header%}
   <div class="container">
     <aside>
-      <h3>Departements</h3>
+      {% block liste %}
+      <h3>Categories</h3>
       <ul class="categories">
-        <li><span><a href="#">Gestion</a></span></li>
-        <li><span><a href="#">Informatique</a></span></li>
-        <li><span><a href="#">Langues</a></span></li>
-        <li><span><a href="#">Polytechnique</a></span></li>
-         <li><span><a href="#">Qualité</a></span></li>
-        <li><span><a href="#">Transport et Logistique</a></span></li>
-       
+        <li><span><a href="#">Programs</a></span></li>
+        <li><span><a href="#">Student Info</a></span></li>
+        <li><span><a href="#">Teachers</a></span></li>
+        <li><span><a href="#">Descriptions</a></span></li>
+        <li><span><a href="#">Administrators</a></span></li>
+        <li><span><a href="#">Basic Information</a></span></li>
+        <li><span><a href="#">Vacancies</a></span></li>
+        <li class="last"><span><a href="#">Calendar</a></span></li>
       </ul>
-      
+      {% endblock liste %}
     </aside>
     <section id="content">
+      {% block image %}
+         <img src="{% static 'eces/images/acceuil1.jpg' %}" width="100%"  height="300px" style="margin-left: 120px;">
+      {% endblock image %}
       <div id="banner">
-        <h2>Professional <span>Online Education <span>Since 1992</span></span></h2>
+
       </div>
       
+      <div class="inside">
+        {% block groupe1 %}
+        <h2>Recent <span>Articles</span></h2>
+        <ul class="list">
+          <li><span><img src="{% static 'eces/images/icon1.png' %}"></span>
+            <h4>About Template</h4>
+            <p>Eusus consequam vitae habitur amet nullam vitae condis phasellus sed justo. Orcivel mollis intesque eu sempor ridictum a non laorem lacingilla wisi.</p>
+          </li>
+          <li><span><img src="{% static 'eces/images/icon2.png' %}"></span>
+            <h4>Branch Office</h4>
+            <p>Eusus consequam vitae habitur amet nullam vitae condis phasellus sed justo. Orcivel mollis intesque eu sempor ridictum a non laorem lacingilla wisi.</p>
+          </li>
+          <li class="last"><span><img src="{% static 'eces/images/icon3.png' %}"></span>
+            <h4>Student’s Time</h4>
+            <p>Eusus consequam vitae habitur amet nullam vitae condis phasellus sed justo. Orcivel mollis intesque eu sempor ridictum a non laorem lacingilla wisi.</p>
+          </li>
+        </ul>
+        {% endblock groupe1 %}
+
+        {% block groupe2 %}
+        <h2>Move Forward <span>With Your Education</span></h2>
+
+        
+        <p><span class="txt1">Eusus consequam</span> vitae habitur amet nullam vitae condis phasellus sed justo. Orcivel mollis intesque eu sempor ridictum a non laorem lacingilla wisi. </p>
+        <div class="img-box"><img src="{% static 'eces/images/1page-img.jpg' %}">Eusus consequam vitae habitur amet nullam vitae condis phasellus sed justo. Orcivel mollis intesque eu sempor ridictum a non laorem lacingilla wisi. Nuncrhoncus eros <a href="#">maurien ulla</a> facilis tor mauris tincidunt et vitae morbi. Velelit condimentes in laorem quis nullamcorper nam fauctor feugiat pellent sociis.</div>
+        <p class="p0">Eusus consequam vitae habitur amet nullam vitae condis phasellus sed justo. Orcivel mollis intesque eu sempor ridictum a <a href="#">non laorem</a> lacingilla wisi.</p>
+        {% endblock groupe2 %}
+      </div>
+
+      {% block formulaire %}
+      <h2>Contact <span>Form</span></h2>
+        <form id="contacts-form" action="#">
+          <fieldset>
+            <div class="field">
+              <label>E-mail:</label>
+              <input type="email" value=""/>
+            </div>
+
+            <div class="field">
+              <label>Mot de passe:</label>
+              <input type="password" value=""/>
+            </div>
+            <div class="alignright"><a href="#">Se connecter</a></div>
+          </fieldset>
+        </form>
+      {% endblock formulaire %}
+
+
     </section>
   </div>
 </div>
 <footer>
   <div class="footerlink">
+    <p class="lf">Copyright &copy; 2010 <a href="#">SiteName</a> - All Rights Reserved</p>
     <p class="rf">Design by <a href="http://www.templatemonster.com/">TemplateMonster</a></p>
     <div style="clear:both;"></div>
   </div>

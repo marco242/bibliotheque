@@ -1,0 +1,50 @@
+{% extends '../index.html' %}
+{% load staticfiles %}
+
+{%  block header %}
+
+{{ block.super}}
+{% endblock header %}
+
+
+{% block liste %}
+{% endblock liste %}
+
+{% block image %}
+
+{% endblock image %}
+
+
+{% block groupe1 %}
+{% endblock groupe1 %}
+
+{% block groupe2 %}
+{% endblock groupe2 %}
+
+{% block formulaire %}
+
+<h2><span>Entrer les informations de connexion</span></h2>
+        <form id="contacts-form" method="post">
+          <fieldset>
+            <div class="field">
+            	{% csrf_token %}
+              <label>
+              	{{ form.as_p }}
+              </label>
+            </div>
+            <div class="alignright">
+            	<button  type="submit">Se connecter</button>
+            </div>
+          </fieldset>
+        </form>
+
+{% endblock formulaire %}
+
+
+<!--<h2>SE CONNECTER</h2>
+<form  method="post">
+{% csrf_token %}
+{{ form.as_p }}
+
+<button  type="submit">Se connecter</button>
+</form>-->
