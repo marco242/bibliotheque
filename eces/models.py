@@ -1,11 +1,11 @@
 from django.db import models
 
 class Departement(models.Model):
-  image=models.FileField(upload_to="Repertoire_Images")
+  image=models.FileField(upload_to="Repertoire_Images", default='Repertoire_Images/defaultimage.jpg')
   libelle=models.CharField(max_length=255, unique=True ,help_text='veuillez indiquer un departement')
   description=models.TextField()
 
-
+#/multimedia/Repertoire_Images/164484340.jpg
   class Meta:
     ordering =('libelle',)
       

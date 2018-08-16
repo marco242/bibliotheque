@@ -10,6 +10,7 @@ body {
 	font-size:100%;
 	line-height:1em;
 	color:#454545;
+
 }
 html {
 	min-width:940px;
@@ -34,8 +35,26 @@ header .container {
 	padding:0;
 }
 section#content {
-	width:691px;
+	width:900px;
 }
+
+section p span a{
+ text-decoration: none;
+ font-size: 20px;
+}
+
+section h2{
+	font-size: 20px;
+}
+
+section h2 p{
+	font-size: 30px;
+}
+
+section p span a:hover{
+	color: #008cc4;
+}
+
 aside {
 	width:219px;
 	float:left;
@@ -192,7 +211,7 @@ p {
 	line-height:1.429em;
 }
 .p0 {
-	margin:0;
+	font-weight: bold;
 }
 .address {
 	width:100%;
@@ -223,8 +242,6 @@ p {
 	height:299px;
 	/*background:url(../images/acceuil1.jpg) no-repeat left top;*/
 }
-
-
 
 #banner h2 {
 	color:#fff;
