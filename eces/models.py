@@ -14,6 +14,9 @@ class Departement(models.Model):
   def __str__(self):
      return self.libelle.title()
 
+
+
+
 class Filiere(models.Model):
   image=models.FileField(upload_to="Repertoire_Images", default='Repertoire_Images/images.jpeg')
   libelle=models.CharField(max_length=255, unique=True ,help_text='veuillez indiquer une filiere')

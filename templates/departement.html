@@ -22,7 +22,7 @@
 {% for departement in departement_list %}
 <p><span class="txt1"><a href="{% url 'departement_detail' departement.pk %}">{{ departement.libelle }}</a></span></p>
  <div class="img-box"><a href="{% url 'departement_detail' departement.pk %}"><img src="{{departement.image.url}}" width="450" height="300"></a></div>
- <p class="p0">{{ departement.description|truncatechars:200 }}</p><br><br>
+ <p class="p0">{{ departement.description|truncatechars:350 }}</p><br><br>
  {% empty %}
 <p>Liste vide</p>
 {% endfor %}

@@ -42,6 +42,7 @@ section#content {
 section p span a{
  text-decoration: none;
  font-size: 20px;
+ color: #008cc4;
 }
 
 section h2{
@@ -54,7 +55,7 @@ section h2 p{
 }
 
 section p span a:hover{
-	color: #008cc4;
+	color: #ff7b01;
 }
 
 aside {
@@ -203,7 +204,7 @@ fieldset {
 }
 .img-box img {
 	float:left;
-	margin:0 20px 0 0;
+	margin:20px --20px 0 0;
 }
 .extra-wrap {
 	overflow:hidden;
@@ -214,6 +215,8 @@ p {
 }
 .p0 {
 	font-weight: bold;
+	font-size: 18px;
+	width: 95%;
 }
 .address {
 	width:100%;
@@ -280,6 +283,8 @@ h1 a {
 	top:104px;
 	background:url(../images/logo.jpg) no-repeat left top;
 }
+
+
 h2 {
 	font-size:20px;
 	line-height:1.2em;
@@ -290,7 +295,7 @@ h2 span {
 	color:#8d8d8d;
 }
 h3 {
-	font-size:20px;
+	font-size:30px;
 	line-height:1.2em;
 	text-transform:uppercase;
 	margin-bottom:15px;
@@ -575,3 +580,19 @@ footer .footerlink {
 a {
 	outline:none;
 }
+
+
+
+/*#effet{
+	animation-play-state: paused; 
+}
+
+
+ #effet:hover , #effet:active{
+ 	animation: tourne 12s linear 0s infinite;  /* style 2 */      
+ } 
+/*
+@keyframes tourne {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+  }*/
