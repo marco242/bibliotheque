@@ -1,18 +1,53 @@
 {% extends 'index.html' %}
-{% load staticfiles %}
-
 {%  block header %}
 {{ block.super }}
 {%  endblock header%}
 
-{% block liste %}
-{% endblock liste %}
+ {% block image %}
+  {% endblock image %}
 
-{% block image %}
-{% endblock image %}
+ {% block departement %}
+ <div id="fh5co-tours" class="fh5co-section-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 animate-box">
+                 <h2 class="heading-title">{{ filiere.libelle }}</h2>
+            </div>
+			<div class="col-md-6 animate-box">
+				<p>{{ filiere.description }}</p>
+				
+		<div class="blog-text">
+			<div class="prod-title">
+				<h3>DOCUMENTS ASSOCIES</h3>
+					{% for document in filiere.document_set.all %}
+						<p><a href="{% url 'document_detail' document.pk %}">{{ document.titre }}</a></p>
+					{% empty %}
+						<p>La liste est vide</p>
+					{% endfor %}
+		    </div>
+		</div> 
+			</div>
+			<div class="col-md-6 animate-box">
+				<img class="img-responsive" src="{{filiere.image.url}}" alt="travel">
+			</div>
+		</div>
 
-{% block groupe1 %}
-{% endblock groupe1 %}
+				
+     </div>
+</div>
+
+
+
+
+
+ {% endblock departement %}
+
+
+
+
+
+
+<!--
 
 {% block groupe2 %}
 
@@ -34,7 +69,7 @@
  {% endblock groupe2 %}
 
 {% block formulaire %}
-{% endblock formulaire %}
+{% endblock formulaire %}-->
 
 
 

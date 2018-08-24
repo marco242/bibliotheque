@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'eces',
-    'crispy_forms',
+
 ]
 
 MIDDLEWARE = [
@@ -126,7 +126,6 @@ STATIC_ROOT='/home/ntangou/Bureau/bibliotheque/multimedia'
 
 
 
-LOGIN_REDIRECT_URL='acceuil'
-LOGOUT_REDIRECT_URL='acceuil'
+LOGIN_REDIRECT_URL='accueil'
+LOGOUT_REDIRECT_URL='accueil'
 
-CRISPY_TEMPLATE_PACK='boostrap4'

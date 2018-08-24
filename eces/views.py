@@ -37,4 +37,9 @@ class ConnexionListView(ListView):
 	model=models.Departement
 
 
+class EquipeListView(ListView):
+	template_name='equipe.html'
+	model=models.Departement
+
+
 # Create your views here.
