@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+
+
+{%  block header %}
+
+{{ block.super}}
+{%  endblock header%}
+
+ {% block image %}
+  {% endblock image %}
+
+
+{% block departement %}
+<div id="fh5co-tours" class="fh5co-section-gray">
+ <div class="container">
+<div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+
+            <h3>Erreur de requête</h3>
+            <p>La page {{ request.path }} n'est pas une page de ce site web.</p>
+          </div>
+        </div>
+
+        
+      </div>
+ </div>
+
+{% endblock departement %}

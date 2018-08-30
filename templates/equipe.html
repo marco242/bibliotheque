@@ -1,29 +1,27 @@
 {% extends 'index.html' %}
-{% load staticfiles %}
+
 
 {%  block header %}
 
 {{ block.super}}
 {%  endblock header%}
 
+ {% block image %}
+  {% endblock image %}
 
-{% block liste %}
-{% endblock liste %}
 
-{% block image %}
-{% endblock image %}
+{% block departement %}
+<div id="fh5co-tours" class="fh5co-section-gray">
+ <div class="container">
+<div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
 
-{% block groupe1 %}
-{% endblock groupe1 %}
+            <h3>Informations sur L'équipe</h3>
+            </div>
+        </div>
+        <p>A la fin de notre parcours academique, nous etudiant et etudiante Yann NTANGOU et Elda Loussilaho en licence III de Telecommunication & reseau et Genie informatique avons passer un stage à l’École Communautaire de l’Enseignement Supérieur(<a href="http://www.eces-online.org/">ECES</a>), puis avons conçue une bibliotheque pour l'ecole avec l'aide de notre professeur Mr Bah.Cette bibliotheque est conçue pour les etudiants et etudiantes de l’École Communautaire de l’Enseignement Supérieur uniquement,et est à la portée de tout les niveaux toutes filieres confondues. Pour plus d'information rapprochez vous de la scolarité...</p>
 
-{% block groupe2 %}
-
-		<h2><span>Informations sur L'Equipe</span></h2>
-		<p>A la fin de notre parcours academique, nous etudiant et etudiante <span class="txt1">Yann NTANGOU</span> et <span class="txt1">Elda Loussilaho</span> en licence III de Telecommunication & reseau et Genie informatique avons passer un stage à l’École Communautaire de l’Enseignement Supérieur(<a href="http://www.eces-online.org/">ECES</a>), puis avons conçue une bibliotheque pour l'ecole avec l'aide de notre professeur <span class="txt1">Mr Bah</span>.Cette bibliotheque est conçue pour les etudiants et etudiantes de l’École Communautaire de l’Enseignement Supérieur uniquement,et est à la portée de tout les niveaux toutes filieres confondues. Pour plus d'information rapprochez vous de la scolarité...
-		</p>
-
-{% endblock groupe2 %}
-
- {% block formulaire %}
-{% endblock formulaire %}
+</div>
+</div>
+{% endblock departement %}
 

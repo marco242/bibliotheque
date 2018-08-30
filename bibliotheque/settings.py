@@ -26,7 +26,7 @@ SECRET_KEY = '0^+%=!qx0p81xv!x8nnjbn)by4j^juohwxl%#4d!2!rpnimj6o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['eces-biblio.org', '127.0.0.1']
 
 
 # Application definition
@@ -128,4 +128,5 @@ STATIC_ROOT='/home/ntangou/Bureau/bibliotheque/multimedia'
 
 LOGIN_REDIRECT_URL='accueil'
 LOGOUT_REDIRECT_URL='accueil'
+
 
