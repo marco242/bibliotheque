@@ -45,6 +45,8 @@ admin.site.register(Departement, DepartementAdmin)
 admin.site.register(Filiere, FiliereAdmin)
 admin.site.register(Document, DocumentAdmin)
 
-# Register your models here.
+admin.site.site_header = "ADMINISTRATION DE LA BIBLIOTHEQUE"
 
+
+# Register your models here.
 
