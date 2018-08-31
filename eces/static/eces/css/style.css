@@ -279,6 +279,10 @@ figure {
   color: yellow !important;
 }
 
+.sf-menu a:{
+  color: red !important;
+}
+
 .sf-menu li.active a:hover, .sf-menu li.active a:focus {
   color: #F78536;
 }
