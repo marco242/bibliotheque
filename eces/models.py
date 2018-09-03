@@ -1,3 +1,4 @@
+
 from django.db import models
 
 class Departement(models.Model):
@@ -8,6 +9,7 @@ class Departement(models.Model):
 #/multimedia/Repertoire_Images/164484340.jpg
   class Meta:
     ordering =('libelle',)
+    verbose_name_plural='DEPARTEMENTS'
       
 
 
@@ -25,6 +27,7 @@ class Filiere(models.Model):
 
   class Meta:
     ordering =('libelle',)
+    verbose_name_plural='FILIERES'
       
 
 
@@ -39,6 +42,9 @@ class Document(models.Model):
   image=models.FileField(upload_to="Repertoire_Images", default='Repertoire_Images/defaultdocument.jpeg')
   fichier=models.FileField(upload_to="Repertoire_Documents")
   filiere=models.ForeignKey(Filiere, on_delete=models.CASCADE)
+
+  class Meta:
+    verbose_name_plural='DOCUMENTS'
    
 
   def __str__(self):

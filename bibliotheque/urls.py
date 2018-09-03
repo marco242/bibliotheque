@@ -19,6 +19,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 
+admin.site.site_header = "ECES BIBLIOTHEQUE"
+admin.site.index_title = "ADMINISTRATION DE LA BIBLIOTHEQUE"
+admin.site.site_title = "ECES BIBLIOTHEQUE"
+
 urlpatterns = [
     path('eces-biblio-admin/', admin.site.urls),
     path('', include('eces.urls')),

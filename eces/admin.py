@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.contrib.auth.models import Group,User
 from . models import Departement, Filiere, Document
 
 
@@ -20,6 +21,11 @@ class DepartementAdmin(admin.ModelAdmin):
   inlines=[
       FiliereInline,
   ]
+
+
+  def has_add_permission(self, request):
+    return False
+
  
 
 
@@ -29,23 +35,30 @@ class FiliereAdmin(admin.ModelAdmin):
   ordering=('libelle',)
   search_fields=('libelle',)
   inlines=[DocumentInline,]
+  list_per_page=5
  
 
 
 
 class DocumentAdmin(admin.ModelAdmin):
-	list_display=('titre', 'image', 'filiere')
-	list_filter=('titre',)
-	ordering=('titre',)
-	search_fields=('titre', 'fichier')
+  list_display=('titre', 'image', 'filiere')
+  list_filter=('titre',)
+  ordering=('titre',)
+  search_fields=('titre', 'fichier')
+  list_per_page=5
+
+
 	
 
+admin.site.unregister(Group)
+#admin.site.register(User)
 
 admin.site.register(Departement, DepartementAdmin)
 admin.site.register(Filiere, FiliereAdmin)
 admin.site.register(Document, DocumentAdmin)
 
-admin.site.site_header = "ADMINISTRATION DE LA BIBLIOTHEQUE"
+
+
 
 
 # Register your models here.
