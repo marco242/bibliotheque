@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'eces',
+    'ckeditor',
 
 ]
 
@@ -124,6 +125,17 @@ STATIC_URL = '/static/'
 MEDIA_URL='/multimedia/'
 STATIC_ROOT='/home/ntangou/Bureau/bibliotheque/multimedia'
 
+#CKEDITOR_UPLOAD_PATH = "uploads/"
+#CKEDITOR_RESTRICT_BY_USER = True
+
+
+#CKEDITOR_CONFIGS = {
+   # 'default': {
+   #     'toolbar': 'Advanced',
+     #   'width': 758,
+      #  'height': 300,
+  #  },
+#}
 
 
 LOGIN_REDIRECT_URL='accueil'

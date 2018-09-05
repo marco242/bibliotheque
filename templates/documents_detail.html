@@ -14,7 +14,7 @@
                  <h2 class="heading-title">{{ document.titre }}</h2>
             </div>
 			<div class="col-md-6 animate-box">
-				<p>{{ document.description }}</p>
+				<p>{{ document.description|safe }}</p>
 				<p><a href="{{ document.fichier.url }}">Document PDF</a></p>
 			</div>
 			<div class="col-md-6 animate-box">

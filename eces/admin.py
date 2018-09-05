@@ -3,7 +3,6 @@ from django.contrib.auth.models import Group,User
 from . models import Departement, Filiere, Document
 
 
-
 class FiliereInline(admin.StackedInline):
 	model=Filiere
 	extra=3
@@ -17,14 +16,14 @@ class DepartementAdmin(admin.ModelAdmin):
   list_display=('libelle', 'image')
   list_filter=('libelle',)
   ordering=('libelle',)
-  search_fields=('libelle',)
+  summernote_fields=('libelle',)
   inlines=[
       FiliereInline,
   ]
 
 
   def has_add_permission(self, request):
-    return False
+    return True
 
  
 
@@ -56,7 +55,6 @@ admin.site.unregister(Group)
 admin.site.register(Departement, DepartementAdmin)
 admin.site.register(Filiere, FiliereAdmin)
 admin.site.register(Document, DocumentAdmin)
-
 
 
 
