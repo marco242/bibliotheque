@@ -1759,6 +1759,7 @@ div.cs-select span {
 @media screen and (max-width: 768px) {
   #offcanvas-menu {
     display: block;
+    background-color: white;
   }
 }
 #offcanvas-menu ul {
@@ -1772,7 +1773,8 @@ div.cs-select span {
 }
 #offcanvas-menu ul li a {
   font-size: 18px;
-  color: rgba(255, 255, 255, 0.4);
+  color: black;
+  font-weight: bold;
 }
 #offcanvas-menu ul li a:hover {
   color: #F78536;
